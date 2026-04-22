@@ -1,0 +1,18 @@
+body {
+display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center;    /* Centers items horizontally (cross axis) */
+  min-height: 100vh;      /* Ensures the body takes up the full screen height */
+  margin: 0;              /* Removes default browser spacing */
+  text-align: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 1em;
+}
