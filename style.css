@@ -4,7 +4,10 @@ display: flex;
   align-items: center;    /* Centers items horizontally (cross axis) */
   min-height: 100vh;      /* Ensures the body takes up the full screen height */
   margin: 0;              /* Removes default browser spacing */
-  text-align: center;
+}
+
+nav, main {
+    width: 500px;
 }
 
 ul {
