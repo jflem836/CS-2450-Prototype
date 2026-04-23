@@ -1,21 +1,106 @@
 body {
-display: flex;
-  flex-direction: column; /* Stacks items vertically */
-  align-items: center;    /* Centers items horizontally (cross axis) */
-  min-height: 100vh;      /* Ensures the body takes up the full screen height */
-  margin: 0;              /* Removes default browser spacing */
-}
-
-nav, main {
-    width: 500px;
-}
-
-ul {
     display: flex;
+    background-color: #FFFDF2;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+nav {
+    width: 100%;
+}
+
+
+main {
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+}
+h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
     list-style: none;
     padding: 0;
 }
 
 li {
-    padding: 1em;
+    padding: 0;
+}
+
+.nav-button {
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.schedule-button {
+    margin-top: 40px;
+    padding: 35px 30px;
+    font-size: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.arrow-button {
+    margin-top: 35px;
+    padding: 10px 30px 10px 20px;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    background-color: #e0e0e0;
+}
+
+.details-button {
+    background-color: #d3d3d3;
+    color: #888;
+    cursor: not-allowed;
+    filter: none;
+    border: none;
+}
+
+.user-info {
+    margin: 30px auto 0 auto;
+    width: fit-content;
+    text-align: center;
+    font-size: 18px;
+}
+
+.schedule-section {
+    margin-top: 30px;
+}
+
+.schedule-box {
+    width: 100%;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+
+.empty-schedule {
+    color: black;
+    font-size: 14px;
 }

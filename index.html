@@ -4,23 +4,46 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="style.css" />
         <script src="functions.js" defer></script>
-        <title>Home - UX Avenger's Prototype</title>
+        <title>Home - UX Avengers Prototype</title>
     </head>
     <body>
-        <nav>
+        <div class="body-container"> 
+            <nav>
             <!-- Navigation bar -->
-            <ul>
-                <li>Home</li>
-                <li>Schedule</li>
-                <li>Alarm</li>
-                <li>Course Database</li>
-                <li>Users Name</li>
+            <ul class="nav-list">
+                <li><button class="nav-button">Home</button></li>
+                <li><button class="nav-button">Schedule</button></li>
+                <li><button class="nav-button">Notifications</button></li>
+                <li><button class="nav-button">Course Database</button></li>
+                <li><button class="nav-button">(user profile)</button></li>
             </ul>
         </nav>
+
         <!-- Main content will go here -->
-        <main>
-            <h1>Welcome, User! (Freshman)</h1>
-            <h3>Your Registration opens in: 12 Days</h3>
-        </main>
+            <main>
+                <h1>Welcome, User! (Freshman)</h1>
+                <h3>Your Registration opens in: 12 Days</h3>
+
+                <div class="user-info"> 
+                    <h4>Major: Engineering</h4>
+                    <h4>Progress: 0/120 credits</h4>
+                </div>
+
+                <button class="schedule-button">Plan My Schedule</button>
+                <button class="arrow-button"> View Roadmap</button>
+
+                <section class="schedule-home">
+                    <h3> Your Schedule: </h3>
+                    <div class="schedule-box">
+                        <p class="empty-schedule"> No Schedule Set</p>
+                    </div>
+                </section>
+
+                <button class="arrow-button details-button" disabled> View Details </button>
+
+                
+
+            </main>
+        </div>
     </body>
 </html>
