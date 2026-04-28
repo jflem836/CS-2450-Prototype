@@ -45,6 +45,10 @@ li {
     padding: 0;
 }
 
+.screen-body-container {
+    align-items: left;
+}
+
 .nav-button {
     width: 150px;
     height: 40px;
