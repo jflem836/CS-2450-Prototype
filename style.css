@@ -16,6 +16,14 @@ main {
     width: 100%;
 }
 
+.screen {
+  display: none;
+}
+
+.screen.active {
+  display: block;
+}
+
 h1 {
     font-size: 32px;
 }
@@ -53,6 +61,7 @@ li {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    background-color: rgb(109, 223, 109);
 }
 
 .arrow-button {

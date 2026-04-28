@@ -1,49 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8"/>
-        <link rel="stylesheet" href="style.css" />
-        <script src="functions.js" defer></script>
-        <title>Home - UX Avengers Prototype</title>
-    </head>
-    <body>
-        <div class="body-container"> 
-            <nav>
-            <!-- Navigation bar -->
-            <ul class="nav-list">
-                <li><button class="nav-button">Home</button></li>
-                <li><button class="nav-button">Schedule</button></li>
-                <li><button class="nav-button">Notifications</button></li>
-                <li><button class="nav-button">Course Database</button></li>
-                <li><button class="nav-button">(user profile)</button></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+    <title>Home - UX Avengers Prototype</title>
+  </head>
+  <body>
+    <nav>
+      <!-- Navigation bar -->
+      <ul class="nav-list">
+        <li>
+          <button onclick="showScreen('home-screen')" class="nav-button">
+            Home
+          </button>
+        </li>
+        <li>
+          <button onclick="showScreen('schedule-screen')" class="nav-button">
+            Schedule
+          </button>
+        </li>
+        <li>
+          <button
+            onclick="showScreen('notifications-screen')"
+            class="nav-button"
+          >
+            Notifications
+          </button>
+        </li>
+        <li>
+          <button
+            onclick="showScreen('course-database-screen')"
+            class="nav-button"
+          >
+            Course Database
+          </button>
+        </li>
+        <li>
+          <button
+            onclick="showScreen('user-profile-screen')"
+            class="nav-button"
+          >
+            (user profile)
+          </button>
+        </li>
+      </ul>
+    </nav>
 
-        <!-- Main content will go here -->
-            <main>
-                <h1>Welcome, User! (Freshman)</h1>
-                <h3>Your Registration opens in: 12 Days</h3>
+    <div class="screen active" id="home-screen">
+      <!-- Main content will go here -->
+      <main>
+        <h1>Welcome, User! (Freshman)</h1>
+        <h3>Your Registration opens in: 12 Days</h3>
 
-                <div class="user-info"> 
-                    <h4>Major: Engineering</h4>
-                    <h4>Progress: 0/120 credits</h4>
-                </div>
-
-                <button class="schedule-button">Plan My Schedule</button>
-                <button class="arrow-button"> View Roadmap</button>
-
-                <section class="schedule-home">
-                    <h3> Your Schedule: </h3>
-                    <div class="schedule-box">
-                        <p class="empty-schedule"> No Schedule Set</p>
-                    </div>
-                </section>
-
-                <button class="arrow-button details-button" disabled> View Details </button>
-
-                
-
-            </main>
+        <div class="user-info">
+          <h4>Major: Engineering</h4>
+          <h4>Progress: 0/120 credits</h4>
         </div>
-    </body>
+
+        <button class="schedule-button">Plan My Schedule</button>
+        <button class="arrow-button">View Roadmap</button>
+
+        <section class="schedule-home">
+          <h3>Your Schedule:</h3>
+          <div class="schedule-box">
+            <p class="empty-schedule">No Schedule Set</p>
+          </div>
+        </section>
+
+        <button class="arrow-button details-button" disabled>
+          View Details
+        </button>
+      </main>
+    </div>
+
+    <div class="screen" id="schedule-screen">
+      <h1>Your Schedule</h1>
+    </div>
+
+    <div class="screen" id="notifications-screen">
+      <h1>Set Alarms</h1>
+    </div>
+
+    <div class="screen" id="course-database-screen">
+      <h1>Select a Section</h1>
+    </div>
+
+    <div class="screen" id="user-profile-screen">
+      <h1>User Profile</h1>
+    </div>
+  </body>
 </html>
