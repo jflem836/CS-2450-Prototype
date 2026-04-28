@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <script src="functions.js" defer></script>
-    <title>Home - UX Avengers Prototype</title>
+    <title>Course Roadmap</title>
   </head>
   <body>
     <nav>
@@ -22,29 +22,21 @@
     </nav>
 
     <main class="page">
-      <div class="user-info">
-        <h1>Welcome, User! (Freshman)</h1>
-        <h3>Your Registration opens in: 12 Days</h3>
+      <div class="screen-title">
+        <h1>Course Roadmap</h1>
       </div>
 
-      <div class="user-info">
-        <h4>Major: Engineering</h4>
-        <h4>Progress: 0/120 credits</h4>
-      </div>
-
-      <a href="course-database.html" class="schedule-button"
-        >Plan My Schedule</a
-      >
-      <a href="course-roadmap.html" class="arrow-button">View Roadmap</a>
-
-      <section class="schedule-home">
-        <h3>Your Schedule:</h3>
-        <div class="schedule-box">
-          <p class="empty-schedule">No Schedule Set</p>
+      <div class="screen-body-container">
+        <h3>Major Requirements:</h3>
+        <div class="courses-box" id="major-courses-box">
+          <p>No current courses</p>
         </div>
-      </section>
 
-      <button class="arrow-button details-button" disabled>View Details</button>
+        <h3>GE Requirements</h3>
+        <div class="courses-box" id="ge-courses-box">
+          <p>No current courses</p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
