@@ -24,12 +24,12 @@ main {
     display: none;
 }
 
-.screen-title{
-    text-align: center;
-}
-
 .screen.active {
     display: block;
+}
+
+.screen-title{
+    text-align: center;
 }
 
 h1 {
@@ -338,4 +338,10 @@ button:active {
     margin: 6px 0;
     font-size: 15px;
     text-align: left;
+}
+
+.alarm-button {
+  border: 2px solid red;
+  position: relative;
+  z-index: 1000;
 }

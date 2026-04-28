@@ -109,7 +109,9 @@
           />
 
           <div class="course-db-buttons">
-            <button class="alarm-button">🔔</button>
+            <button onclick="showScreen('alarms-screen')" class="alarm-button">
+              🔔
+            </button>
             <button class="filter-button">Filter</button>
           </div>
         </div>
@@ -172,52 +174,52 @@
               <p>Description</p>
             </div>
           </div>
+        </div>
 
-          <div class="course-dropdown">
-            <button
-              class="dropdown-toggle"
-              onclick="toggleDropdown('ge-dropdown')"
-            >
-              GE Courses
-            </button>
+        <div class="course-dropdown">
+          <button
+            class="dropdown-toggle"
+            onclick="toggleDropdown('ge-dropdown')"
+          >
+            GE Courses
+          </button>
 
-            <div class="dropdown-content" id="ge-dropdown">
-              <div class="course-card">
-                <div class="course-card-header">
-                  <div class="course-card-title-group">
-                    <input type="checkbox" class="course-select-box" />
-                    <h1 class="course-name">MAT 1140</h1>
-                  </div>
+          <div class="dropdown-content" id="ge-dropdown">
+            <div class="course-card">
+              <div class="course-card-header">
+                <div class="course-card-title-group">
+                  <input type="checkbox" class="course-select-box" />
+                  <h1 class="course-name">MAT 1140</h1>
                 </div>
-
-                <h3>Calculus 1</h3>
-                <p>No Prerequisites</p>
-                <p>Not Taken</p>
-                <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
-                <p>Description</p>
               </div>
 
-              <div class="course-card">
-                <div class="course-card-header">
-                  <div class="course-card-title-group">
-                    <input type="checkbox" class="course-select-box" />
-                    <h1 class="course-name">MAT 1140</h1>
-                  </div>
+              <h3>Calculus 1</h3>
+              <p>No Prerequisites</p>
+              <p>Not Taken</p>
+              <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+              <p>Description</p>
+            </div>
 
-                  <div class="course-card-icons">
-                    <span class="icon-wrapper">
-                      <span class="course-icon">🔥</span>
-                      <span class="icon-tooltip">Popular Professor</span>
-                    </span>
-                  </div>
+            <div class="course-card">
+              <div class="course-card-header">
+                <div class="course-card-title-group">
+                  <input type="checkbox" class="course-select-box" />
+                  <h1 class="course-name">MAT 1140</h1>
                 </div>
 
-                <h3>Calculus 1</h3>
-                <p>No Prerequisites</p>
-                <p>Not Taken</p>
-                <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
-                <p>Description</p>
+                <div class="course-card-icons">
+                  <span class="icon-wrapper">
+                    <span class="course-icon">🔥</span>
+                    <span class="icon-tooltip">Popular Professor</span>
+                  </span>
+                </div>
               </div>
+
+              <h3>Calculus 1</h3>
+              <p>No Prerequisites</p>
+              <p>Not Taken</p>
+              <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+              <p>Description</p>
             </div>
           </div>
         </div>
