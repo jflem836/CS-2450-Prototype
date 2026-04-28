@@ -50,9 +50,10 @@
     <div class="screen active" id="home-screen">
       <!-- Main content will go here -->
       <main>
-        <h1>Welcome, User! (Freshman)</h1>
-        <h3>Your Registration opens in: 12 Days</h3>
-
+        <div class="user-info">
+          <h1>Welcome, User! (Freshman)</h1>
+          <h3>Your Registration opens in: 12 Days</h3>
+        </div>
         <div class="user-info">
           <h4>Major: Engineering</h4>
           <h4>Progress: 0/120 credits</h4>
@@ -85,23 +86,108 @@
     </div>
 
     <div class="screen" id="schedule-screen">
-      <h1>Your Schedule</h1>
+      <div class="screen-title">
+        <h1>Your Schedule</h1>
+      </div>
     </div>
 
     <div class="screen" id="notifications-screen">
-      <h1>Set Alarms</h1>
+      <div class="screen-title">
+        <h1>Set Alarms</h1>
+      </div>
     </div>
 
     <div class="screen" id="course-database-screen">
-      <h1>Select a Section</h1>
+      <div class="screen-title">
+        <h1>Select a Section</h1>
+      </div>
+
+      <div class="screen-body-container">
+        <div class="course-db-topbar">
+          <input
+            type="text"
+            id="course-search"
+            class="course-search-bar"
+            placeholder="Search courses..."
+          />
+
+          <div class="course-db-buttons">
+            <button class="alarm-button">Alarms</button>
+            <button class="filter-button">Filter</button>
+          </div>
+        </div>
+
+        <div class="course-dropdown">
+          <button
+            class="dropdown-toggle"
+            onclick="toggleDropdown('major-dropdown')"
+          >
+            Major Courses
+          </button>
+
+          <div class="dropdown-content" id="major-dropdown">
+            <div class="course-card">
+              <h2>MAT 1140</h2>
+              <h3>Calculus 1</h3>
+              <p>No Prerequisites</p>
+              <p>Not Taken</p>
+              <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+              <p>Description</p>
+            </div>
+
+            <div class="course-card">
+              <h2>MAT 1140</h2>
+              <h3>Calculus 1</h3>
+              <p>No Prerequisites</p>
+              <p>Not Taken</p>
+              <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+              <p>Description</p>
+            </div>
+          </div>
+
+          <div class="course-dropdown">
+            <button
+              class="dropdown-toggle"
+              onclick="toggleDropdown('ge-dropdown')"
+            >
+              GE Courses
+            </button>
+
+            <div class="dropdown-content" id="ge-dropdown">
+              <div class="course-card">
+                <h2>MAT 1140</h2>
+                <h3>Calculus 1</h3>
+                <p>No Prerequisites</p>
+                <p>Not Taken</p>
+                <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+                <p>Description</p>
+              </div>
+
+              <div class="course-card">
+                <h2>MAT 1140</h2>
+                <h3>Calculus 1</h3>
+                <p>No Prerequisites</p>
+                <p>Not Taken</p>
+                <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+                <p>Description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="add-courses-button">Add Selected Courses</button>
     </div>
 
     <div class="screen" id="user-profile-screen">
-      <h1>User Profile</h1>
+      <div class="screen-title">
+        <h1>User Profile</h1>
+      </div>
     </div>
 
     <div class="screen" id="course-roadmap-screen">
-      <h1>Course Roadmap</h1>
+      <div class="screen-title">
+        <h1>Course Roadmap</h1>
+      </div>
       <div class="screen-body-container">
         <h3>Major Requirements:</h3>
         <div class="courses-box" id="major-courses-box">
