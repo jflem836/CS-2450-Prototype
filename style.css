@@ -5,6 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 10px;
 }
 
 nav {
@@ -51,6 +52,10 @@ li {
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 .schedule-button {
