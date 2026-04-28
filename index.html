@@ -21,11 +21,8 @@
           </button>
         </li>
         <li>
-          <button
-            onclick="showScreen('notifications-screen')"
-            class="nav-button"
-          >
-            Notifications
+          <button onclick="showScreen('alarms-screen')" class="nav-button">
+            Alarms
           </button>
         </li>
         <li>
@@ -91,7 +88,7 @@
       </div>
     </div>
 
-    <div class="screen" id="notifications-screen">
+    <div class="screen" id="alarms-screen">
       <div class="screen-title">
         <h1>Set Alarms</h1>
       </div>
@@ -112,7 +109,7 @@
           />
 
           <div class="course-db-buttons">
-            <button class="alarm-button">Alarms</button>
+            <button class="alarm-button">🔔</button>
             <button class="filter-button">Filter</button>
           </div>
         </div>
@@ -127,7 +124,20 @@
 
           <div class="dropdown-content" id="major-dropdown">
             <div class="course-card">
-              <h2>MAT 1140</h2>
+              <div class="course-card-header">
+                <div class="course-card-title-group">
+                  <input type="checkbox" class="course-select-box" />
+                  <h1 class="course-name">MAT 1140</h1>
+                </div>
+
+                <div class="course-card-icons">
+                  <span class="icon-wrapper">
+                    <span class="course-icon">📈</span>
+                    <span class="icon-tooltip">Current Saved: 150</span>
+                  </span>
+                </div>
+              </div>
+
               <h3>Calculus 1</h3>
               <p>No Prerequisites</p>
               <p>Not Taken</p>
@@ -136,7 +146,25 @@
             </div>
 
             <div class="course-card">
-              <h2>MAT 1140</h2>
+              <div class="course-card-header">
+                <div class="course-card-title-group">
+                  <input type="checkbox" class="course-select-box" />
+                  <h1 class="course-name">MAT 1140</h1>
+                </div>
+
+                <div class="course-card-icons">
+                  <span class="icon-wrapper">
+                    <span class="course-icon">📈</span>
+                    <span class="icon-tooltip">Current Saved: 100</span>
+                  </span>
+
+                  <span class="icon-wrapper">
+                    <span class="course-icon">🔥</span>
+                    <span class="icon-tooltip">Popular Professor</span>
+                  </span>
+                </div>
+              </div>
+
               <h3>Calculus 1</h3>
               <p>No Prerequisites</p>
               <p>Not Taken</p>
@@ -155,7 +183,13 @@
 
             <div class="dropdown-content" id="ge-dropdown">
               <div class="course-card">
-                <h2>MAT 1140</h2>
+                <div class="course-card-header">
+                  <div class="course-card-title-group">
+                    <input type="checkbox" class="course-select-box" />
+                    <h1 class="course-name">MAT 1140</h1>
+                  </div>
+                </div>
+
                 <h3>Calculus 1</h3>
                 <p>No Prerequisites</p>
                 <p>Not Taken</p>
@@ -164,7 +198,20 @@
               </div>
 
               <div class="course-card">
-                <h2>MAT 1140</h2>
+                <div class="course-card-header">
+                  <div class="course-card-title-group">
+                    <input type="checkbox" class="course-select-box" />
+                    <h1 class="course-name">MAT 1140</h1>
+                  </div>
+
+                  <div class="course-card-icons">
+                    <span class="icon-wrapper">
+                      <span class="course-icon">🔥</span>
+                      <span class="icon-tooltip">Popular Professor</span>
+                    </span>
+                  </div>
+                </div>
+
                 <h3>Calculus 1</h3>
                 <p>No Prerequisites</p>
                 <p>Not Taken</p>
