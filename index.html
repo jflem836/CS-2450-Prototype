@@ -58,8 +58,18 @@
           <h4>Progress: 0/120 credits</h4>
         </div>
 
-        <button class="schedule-button">Plan My Schedule</button>
-        <button class="arrow-button">View Roadmap</button>
+        <button
+          onclick="showScreen('course-database-screen')"
+          class="schedule-button"
+        >
+          Plan My Schedule
+        </button>
+        <button
+          onclick="showScreen('course-roadmap-screen')"
+          class="arrow-button"
+        >
+          View Roadmap
+        </button>
 
         <section class="schedule-home">
           <h3>Your Schedule:</h3>
@@ -88,6 +98,10 @@
 
     <div class="screen" id="user-profile-screen">
       <h1>User Profile</h1>
+    </div>
+
+    <div class="screen" id="course-roadmap-screen">
+      <h1>Course Roadmap</h1>
     </div>
   </body>
 </html>
