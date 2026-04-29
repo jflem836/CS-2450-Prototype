@@ -370,6 +370,62 @@ button:active,
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+
+// Schedule Page
+// =====================================
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    grid-template-rows: 50px repeat(14, 60px);
+    gap: 1px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.table-header {
+    background-color: #585858;
+    color: white;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+    font-size: 14px;
+    border-spacing: 1px;
+    background-color: #cfcfcf;
+}
+
+td {
+    background-color: white;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+th {
+    padding: 15px;
+    border-radius: 2px;
+}
+
+/* Course card fills its cell */
+td[data-course] {
+    padding: 0;
+}
+
+.sch-course-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: #cde5ff;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #004085;
+    z-index: 10;
+}
+
+
+
 @media (max-width: 700px) {
     nav ul {
         flex-wrap: wrap;
