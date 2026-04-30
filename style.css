@@ -21,6 +21,10 @@ main,
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     font-size: 32px;
 }
@@ -129,6 +133,21 @@ button:active,
     background: none;
     cursor: pointer;
     clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    background-color: #e0e0e0;
+}
+
+.arrow-button-back {
+    margin-top: 35px;
+    padding: 10px 20px 10px 30px;
+    font-size: 16px;
+    display: block;
+    width: fit-content;
+    margin-left: 0;
+    margin-right: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
     background-color: #e0e0e0;
 }
 
@@ -372,8 +391,7 @@ button:active,
 }
 
 
-// Schedule Page
-// =====================================
+/* Schedule Page */
 .calendar-grid {
     display: grid;
     grid-template-columns: 80px repeat(7, 1fr);
@@ -423,6 +441,47 @@ td[data-course] {
     font-weight: bold;
     color: #004085;
     z-index: 10;
+}
+
+.info-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 16px;
+}
+
+/* Schedule Menu */
+.schedule-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.schedule-menu-saved {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+}
+
+
+/* Warning message for Schedule */
+#warnings-popup {
+  display: none; 
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  text-align: left;
+}
+
+#warnings-popup.open {
+  display: block;
 }
 
 

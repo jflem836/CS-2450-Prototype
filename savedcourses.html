@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+    <title>Saved Courses | Roadmap</title>
+  </head>
+
+  <body>
+    <!-- Main Navigation -->
+    <nav class="main-nav" aria-label="Primary Navigation">
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-button">Home</a></li>
+        <li><a href="schedule.html" class="nav-button">Schedule</a></li>
+        <li><a href="alarms.html" class="nav-button">Alarms</a></li>
+        <li><a href="course-database.html" class="nav-button">Course Database</a></li>
+        <li><a href="user-profile.html" class="nav-button">Profile</a></li>
+      </ul>
+    </nav>
+
+    <main class="page">
+      <header class="screen-title">
+        <h1>Saved Courses</h1>
+        <section class="info-box">
+          <p><strong>Tip:</strong> Save backup courses while browsing. They will appear here for quick access.</p>
+        </section>
+      </header>
+
+      <!-- Course Selection Table -->
+      <section class="content-section">
+        <table id="saved-courses-table">
+          <thead>
+            <tr class="table-header">
+              <th>Course</th>
+              <th>Days &amp; Time</th>
+              <th>Prerequisites</th>
+              <th>Credits</th>
+            </tr>
+          </thead>
+          <tbody id="saved-courses-body">
+            <tr class="table-data selected" onclick="selectRow(this)">
+              <td>MAT 1140</td>
+              <td>MWF 8AM</td>
+              <td>MAT 1050</td>
+              <td>3</td>
+            </tr>
+            <tr class="table-data" onclick="selectRow(this)">
+              <td>CS 2200</td>
+              <td>TR 10AM</td>
+              <td>CS 1100</td>
+              <td>4</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Action Footer -->
+      <footer class="schedule-menu-wrapper">
+        <nav class="schedule-menu-saved" id="schedule-menu">
+          <div class="menu-left">
+            <button type="button" class="arrow-button-back" onclick="location.href='course-database.html'">
+              Return to Course List
+            </button>
+          </div>
+          
+          <div class="menu-right">
+            <button type="button" class="arrow-button" data-action="view-course">
+              View Course Details
+            </button>
+            <button type="button" class="arrow-button highlight" data-action="add-section">
+              Add Section to Schedule
+            </button>
+          </div>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

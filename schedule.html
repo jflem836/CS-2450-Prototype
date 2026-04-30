@@ -10,10 +10,10 @@
     <nav>
       <ul class="nav-list">
         <li><a href="index.html" class="nav-button">Home</a></li>
-        <li><a href="schedule.html" class="nav-button">Schedule</a></li>
-        <li><a href="alarms.html" class="nav-button">Alarms</a></li>
+        <li><a href="schedule.html" class="nav-button active">Schedule</a></li>
+        <li><a href="degree.html" class="nav-button">Degree</a></li>
         <li><a href="course-database.html" class="nav-button">Course Database</a></li>
-        <li><a href="user-profile.html" class="nav-button">(user profile)</a></li>
+        <li><a href="user-profile.html" class="nav-button">Phillip</a></li>
       </ul>
     </nav>
 
@@ -25,167 +25,145 @@
             <thead>
               <tr class="table-header">
                 <th>Time</th>
-                <th>Sun</th>
                 <th>Mon</th>
                 <th>Tues</th>
                 <th>Wed</th>
                 <th>Thur</th>
                 <th>Fri</th>
-                <th>Sat</th>
               </tr>
             </thead>
             <tbody id="schedule-body">
-              <tr class="table-data" data-time="7AM">
+              <tr class="table-data" data-time="7AM" data-full="false">
                 <td class="time-label">7AM</td>
-                <td data-day="sun" data-time="7AM"></td>
                 <td data-day="mon" data-time="7AM"></td>
                 <td data-day="tue" data-time="7AM"></td>
                 <td data-day="wed" data-time="7AM"></td>
                 <td data-day="thu" data-time="7AM"></td>
                 <td data-day="fri" data-time="7AM"></td>
-                <td data-day="sat" data-time="7AM"></td>
               </tr>
-              <tr class="table-data" data-time="8AM">
+              <tr class="table-data" data-time="8AM" data-full="true">
                 <td class="time-label">8AM</td>
-                <td data-day="sun" data-time="8AM"></td>
                 <td data-day="mon" data-time="8AM"></td>
                 <td data-day="tue" data-time="8AM" data-course="mat1140"><span class="sch-course-card">MAT 1140</span></td>
                 <td data-day="wed" data-time="8AM"></td>
                 <td data-day="thu" data-time="8AM" data-course="mat1140"><span class="sch-course-card">MAT 1140</span></td>
                 <td data-day="fri" data-time="8AM"></td>
-                <td data-day="sat" data-time="8AM"></td>
               </tr>
-              <tr class="table-data" data-time="9AM">
+              <tr class="table-data" data-time="9AM" data-full="false">
                 <td class="time-label">9AM</td>
-                <td data-day="sun" data-time="9AM"></td>
                 <td data-day="mon" data-time="9AM"></td>
                 <td data-day="tue" data-time="9AM" data-course="mat1140"><span class="sch-course-card">MAT 1140</span></td>
                 <td data-day="wed" data-time="9AM"></td>
                 <td data-day="thu" data-time="9AM" data-course="mat1140"><span class="sch-course-card">MAT 1140</span></td>
                 <td data-day="fri" data-time="9AM"></td>
-                <td data-day="sat" data-time="9AM"></td>
               </tr>
-              <tr class="table-data" data-time="10AM">
+              <tr class="table-data" data-time="10AM" data-full="false">
                 <td class="time-label">10AM</td>
-                <td data-day="sun" data-time="10AM"></td>
                 <td data-day="mon" data-time="10AM"></td>
                 <td data-day="tue" data-time="10AM" data-course="mat1140"><span class="sch-course-card">MAT 1140</span></td>
                 <td data-day="wed" data-time="10AM"></td>
                 <td data-day="thu" data-time="10AM" data-course="mat1140"><span class="sch-course-card">MAT 1140</span></td>
                 <td data-day="fri" data-time="10AM"></td>
-                <td data-day="sat" data-time="10AM"></td>
               </tr>
-              <tr class="table-data" data-time="11AM">
+              <tr class="table-data" data-time="11AM" data-full="false">
                 <td class="time-label">11AM</td>
-                <td data-day="sun" data-time="11AM"></td>
                 <td data-day="mon" data-time="11AM"></td>
                 <td data-day="tue" data-time="11AM"></td>
                 <td data-day="wed" data-time="11AM"></td>
                 <td data-day="thu" data-time="11AM"></td>
                 <td data-day="fri" data-time="11AM"></td>
-                <td data-day="sat" data-time="11AM"></td>
               </tr>
-              <tr class="table-data" data-time="12PM">
+              <tr class="table-data" data-time="12PM" data-full="false">
                 <td class="time-label">12PM</td>
-                <td data-day="sun" data-time="12PM"></td>
                 <td data-day="mon" data-time="12PM"></td>
                 <td data-day="tue" data-time="12PM"></td>
                 <td data-day="wed" data-time="12PM"></td>
                 <td data-day="thu" data-time="12PM"></td>
                 <td data-day="fri" data-time="12PM"></td>
-                <td data-day="sat" data-time="12PM"></td>
               </tr>
-              <tr class="table-data" data-time="1PM">
+              <tr class="table-data" data-time="1PM" data-full="false">
                 <td class="time-label">1PM</td>
-                <td data-day="sun" data-time="1PM"></td>
-                <td data-day="mon" data-time="1PM"></td>
+                <td data-day="mon" data-time="1PM" data-course="cs2140"><span class="sch-course-card">CS 2140</span></td>
                 <td data-day="tue" data-time="1PM"></td>
-                <td data-day="wed" data-time="1PM"></td>
+                <td data-day="wed" data-time="1PM" data-course="cs2140"><span class="sch-course-card">CS 2140</span></td>
                 <td data-day="thu" data-time="1PM"></td>
                 <td data-day="fri" data-time="1PM"></td>
-                <td data-day="sat" data-time="1PM"></td>
               </tr>
-              <tr class="table-data" data-time="2PM">
+              <tr class="table-data" data-time="2PM" data-full="false">
                 <td class="time-label">2PM</td>
-                <td data-day="sun" data-time="2PM"></td>
-                <td data-day="mon" data-time="2PM"></td>
-                <td data-day="tue" data-time="2PM"></td>
-                <td data-day="wed" data-time="2PM"></td>
+                <td data-day="mon" data-time="2PM" data-course="cs2140"><span class="sch-course-card">CS 2140</span></td>
+                <td data-day="tue" data-time="1PM"></td>
+                <td data-day="wed" data-time="2PM" data-course="cs2140"><span class="sch-course-card">CS 2140</span></td>
                 <td data-day="thu" data-time="2PM"></td>
                 <td data-day="fri" data-time="2PM"></td>
-                <td data-day="sat" data-time="2PM"></td>
               </tr>
-              <tr class="table-data" data-time="3PM">
+              <tr class="table-data" data-time="3PM" data-full="false">
                 <td class="time-label">3PM</td>
-                <td data-day="sun" data-time="3PM"></td>
                 <td data-day="mon" data-time="3PM"></td>
                 <td data-day="tue" data-time="3PM"></td>
                 <td data-day="wed" data-time="3PM"></td>
                 <td data-day="thu" data-time="3PM"></td>
                 <td data-day="fri" data-time="3PM"></td>
-                <td data-day="sat" data-time="3PM"></td>
               </tr>
-              <tr class="table-data" data-time="4PM">
+              <tr class="table-data" data-time="4PM" data-full="false">
                 <td class="time-label">4PM</td>
-                <td data-day="sun" data-time="4PM"></td>
                 <td data-day="mon" data-time="4PM"></td>
                 <td data-day="tue" data-time="4PM"></td>
                 <td data-day="wed" data-time="4PM"></td>
                 <td data-day="thu" data-time="4PM"></td>
                 <td data-day="fri" data-time="4PM"></td>
-                <td data-day="sat" data-time="4PM"></td>
               </tr>
-              <tr class="table-data" data-time="5PM">
+              <tr class="table-data" data-time="5PM" data-full="false">
                 <td class="time-label">5PM</td>
-                <td data-day="sun" data-time="5PM"></td>
                 <td data-day="mon" data-time="5PM"></td>
                 <td data-day="tue" data-time="5PM"></td>
                 <td data-day="wed" data-time="5PM"></td>
                 <td data-day="thu" data-time="5PM"></td>
                 <td data-day="fri" data-time="5PM"></td>
-                <td data-day="sat" data-time="5PM"></td>
               </tr>
-              <tr class="table-data" data-time="6PM">
+              <tr class="table-data" data-time="6PM" data-full="false">
                 <td class="time-label">6PM</td>
-                <td data-day="sun" data-time="6PM"></td>
                 <td data-day="mon" data-time="6PM"></td>
                 <td data-day="tue" data-time="6PM"></td>
                 <td data-day="wed" data-time="6PM"></td>
                 <td data-day="thu" data-time="6PM"></td>
                 <td data-day="fri" data-time="6PM"></td>
-                <td data-day="sat" data-time="6PM"></td>
               </tr>
-              <tr class="table-data" data-time="7PM">
+              <tr class="table-data" data-time="7PM" data-full="false">
                 <td class="time-label">7PM</td>
-                <td data-day="sun" data-time="7PM"></td>
                 <td data-day="mon" data-time="7PM"></td>
                 <td data-day="tue" data-time="7PM"></td>
                 <td data-day="wed" data-time="7PM"></td>
                 <td data-day="thu" data-time="7PM"></td>
                 <td data-day="fri" data-time="7PM"></td>
-                <td data-day="sat" data-time="7PM"></td>
               </tr>
-              <tr class="table-data" data-time="8PM">
+              <tr class="table-data" data-time="8PM" data-full="false">
                 <td class="time-label">8PM</td>
-                <td data-day="sun" data-time="8PM"></td>
                 <td data-day="mon" data-time="8PM"></td>
                 <td data-day="tue" data-time="8PM"></td>
                 <td data-day="wed" data-time="8PM"></td>
                 <td data-day="thu" data-time="8PM"></td>
                 <td data-day="fri" data-time="8PM"></td>
-                <td data-day="sat" data-time="8PM"></td>
               </tr>
             </tbody>
           </table>
-          <p id="credit-count">Table Credits: 12</p>
+
+          <p id="credit-count">Total Credits: 12</p>
           <p id="warning-message">Warning(s): One or more section(s) are full!</p>
         </div>
+
         <nav class="schedule-menu" id="schedule-menu">
-          <button type="button" class="arrow-button" data-action="warnings">Warning Details</button>
-          <button type="button" class="arrow-button" data-action="add-courses">Add More Courses</button>
-          <button type="button" class="arrow-button" data-action="saved-courses">View Saved Courses</button>
-          <button type="button" class="arrow-button" data-action="finalize">Finalize Schedule</button>
+          <div id="warnings-popup" class="toggle-content">
+              <p>No warnings at this time.</p>
+          </div>
+          <button type="button" class="arrow-button" onclick="toggleDropdown('warnings-popup')">
+            Warning Details
+          </button>
+          <a href="course-database.html"><button type="button" class="arrow-button" data-action="add-courses">Add More Courses</button></a>
+          <a href="savedcourses.html"><button type="button" class="arrow-button" data-action="saved-courses">View Saved Courses</button></a>
+          <a href=""><button type="button" class="arrow-button" data-action="finalize">Finalize Schedule</button></a>
         </nav>
+
       </div>
     </main>
   </body>
