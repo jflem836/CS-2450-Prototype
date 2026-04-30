@@ -513,3 +513,16 @@ td[data-course] {
     transform: none;
     filter: none;
 }
+
+
+.table-data.selected td {
+  background-color: #e3f2fd;
+  font-weight: 600;
+}
+
+/* Changed course card look when selected */
+.course-card.selected {
+  border: 2px solid #1976d2;
+  background-color: #f4f9ff;
+  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.12);
+}

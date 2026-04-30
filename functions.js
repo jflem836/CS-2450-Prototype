@@ -66,3 +66,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+// Add selected courses
+function selectRow(row) {
+  document.querySelectorAll("#saved-courses-body .table-data").forEach(r => {
+    r.classList.remove("selected");
+  });
+  row.classList.add("selected");
+}
+
+// Show visual changes when selecting a course
+document.addEventListener("change", (e) => {
+  if (e.target.classList.contains("course-select-box")) {
+    const card = e.target.closest(".course-card");
+    if (card) {
+      card.classList.toggle("selected", e.target.checked);
+    }
+    updateAddButtonState();
+  }
+});
