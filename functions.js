@@ -18,10 +18,11 @@ function toggleBackup(button) {
     tooltip.textContent = "Saved as backup";
   } else {
     button.textContent = "💾";
-    tooltip.textContent = "Save as backup class";
+    tooltip.textContent = "Save as backup class: backup classes added to cart when same class you applied for is full.";
   }
 }
 
+// Updates remove class to "removed state" and back to og state when clicked
 function toggleRemove(button){
   const wrapper = button.parentElement;
   const tooltip = wrapper.querySelector(".icon-tooltip");
@@ -29,11 +30,11 @@ function toggleRemove(button){
   const isSaved = button.classList.toggle("saved");
 
   if (isSaved) {
-    button.textContent = "✅"; // change icon
-    tooltip.textContent = "Saved as backup";
+    button.textContent = "↩️"; // change icon
+    tooltip.textContent = "Removing when click confirm at bottom, click to undo";
   } else {
-    button.textContent = "💾";
-    tooltip.textContent = "Save as backup class";
+    button.textContent = "❌";
+    tooltip.textContent = "Removes class from schedule once confirmed";
   }
 }
 
