@@ -430,7 +430,7 @@ button:active,
 .add-courses-button {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: max(20px, calc((100vw - 800px) / 2 + 20px));
     padding: 16px 20px;
     font-size: 16px;
     border: none;
