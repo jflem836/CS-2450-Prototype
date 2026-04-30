@@ -60,7 +60,17 @@
                 <div class="course-card-icons">
                   <span class="icon-wrapper">
                     <span class="course-icon">📈</span>
-                    <span class="icon-tooltip">Current Saved: 150</span>
+                    <span class="icon-tooltip">Currently Saved/Added: 150</span>
+                  </span>
+
+                  <span class="icon-wrapper">
+                    <button class="backup-button" onclick="toggleBackup(this)">
+                      💾
+                    </button>
+                    <span class="icon-tooltip"
+                      >Save as backup class: backup classes added to cart when
+                      same class you applied for is full.</span
+                    >
                   </span>
                 </div>
               </div>
@@ -86,12 +96,22 @@
                 <div class="course-card-icons">
                   <span class="icon-wrapper">
                     <span class="course-icon">📈</span>
-                    <span class="icon-tooltip">Current Saved: 100</span>
+                    <span class="icon-tooltip">Currently Saved/Added: 100</span>
                   </span>
 
                   <span class="icon-wrapper">
                     <span class="course-icon">🔥</span>
                     <span class="icon-tooltip">Popular Professor</span>
+                  </span>
+
+                  <span class="icon-wrapper">
+                    <button class="backup-button" onclick="toggleBackup(this)">
+                      💾
+                    </button>
+                    <span class="icon-tooltip"
+                      >Save as backup class: backup classes added to cart when
+                      same class you applied for is full.</span
+                    >
                   </span>
                 </div>
               </div>
@@ -124,6 +144,18 @@
                   <input type="checkbox" class="course-select-box" />
                   <h2 class="course-name">MAT 1140</h2>
                 </div>
+
+                <div class="course-card-icons">
+                  <span class="icon-wrapper">
+                    <button class="backup-button" onclick="toggleBackup(this)">
+                      💾
+                    </button>
+                    <span class="icon-tooltip"
+                      >Save as backup class: backup classes added to cart when
+                      same class you applied for is full.</span
+                    >
+                  </span>
+                </div>
               </div>
 
               <div class="course-card-divider"></div>
@@ -149,6 +181,16 @@
                     <span class="course-icon">🔥</span>
                     <span class="icon-tooltip">Popular Professor</span>
                   </span>
+
+                  <span class="icon-wrapper">
+                    <button class="backup-button" onclick="toggleBackup(this)">
+                      💾
+                    </button>
+                    <span class="icon-tooltip"
+                      >Save as backup class: backup classes added to cart when
+                      same class you applied for is full.</span
+                    >
+                  </span>
                 </div>
               </div>
 
@@ -166,7 +208,9 @@
         </div>
       </div>
 
-      <button class="add-courses-button">Add Selected Courses</button>
+      <button id="add-courses-button" class="add-courses-button" disabled>
+        Add Selected Courses
+      </button>
     </main>
   </body>
 </html>

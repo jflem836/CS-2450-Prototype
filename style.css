@@ -498,3 +498,18 @@ td[data-course] {
         margin-left: 0;
     }
 }
+
+
+/*  Changes what add courses button looks like when locked  */
+.add-courses-button:disabled {
+    background-color: #d3d3d3;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.add-courses-button:disabled:hover,
+.add-courses-button:disabled:active {
+    transform: none;
+    filter: none;
+}

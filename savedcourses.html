@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
@@ -15,7 +15,9 @@
         <li><a href="index.html" class="nav-button">Home</a></li>
         <li><a href="schedule.html" class="nav-button">Schedule</a></li>
         <li><a href="alarms.html" class="nav-button">Alarms</a></li>
-        <li><a href="course-database.html" class="nav-button">Course Database</a></li>
+        <li>
+          <a href="course-database.html" class="nav-button">Course Database</a>
+        </li>
         <li><a href="user-profile.html" class="nav-button">Profile</a></li>
       </ul>
     </nav>
@@ -24,7 +26,10 @@
       <header class="screen-title">
         <h1>Saved Courses</h1>
         <section class="info-box">
-          <p><strong>Tip:</strong> Save backup courses while browsing. They will appear here for quick access.</p>
+          <p>
+            <strong>Tip:</strong> Save backup courses while browsing. They will
+            appear here for quick access.
+          </p>
         </section>
       </header>
 
@@ -48,7 +53,7 @@
             </tr>
             <tr class="table-data" onclick="selectRow(this)">
               <td>CS 2200</td>
-              <td>TR 10AM</td>
+              <td>TuTh 10AM</td>
               <td>CS 1100</td>
               <td>4</td>
             </tr>
@@ -60,18 +65,32 @@
       <footer class="schedule-menu-wrapper">
         <nav class="schedule-menu-saved" id="schedule-menu">
           <div class="menu-left">
-            <button type="button" class="arrow-button-back" onclick="location.href='course-database.html'">
+            <button
+              type="button"
+              class="arrow-button-back"
+              onclick="location.href = 'course-database.html'"
+            >
               Return to Course List
             </button>
           </div>
-          
+
           <div class="menu-right">
-            <button type="button" class="arrow-button" data-action="view-course">
+            <a
+              href="course-confirm.html"
+              type="button"
+              class="arrow-button"
+              data-action="view-course"
+            >
               View Course Details
-            </button>
-            <button type="button" class="arrow-button highlight" data-action="add-section">
+            </a>
+            <a
+              href=""
+              type="button"
+              class="arrow-button highlight"
+              data-action="add-section"
+            >
               Add Section to Schedule
-            </button>
+            </a>
           </div>
         </nav>
       </footer>

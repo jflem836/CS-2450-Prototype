@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="functions.js" defer></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html" class="nav-button">Home</a></li>
+        <li><a href="schedule.html" class="nav-button">Schedule</a></li>
+        <li><a href="alarms.html" class="nav-button">Alarms</a></li>
+        <li>
+          <a href="course-database.html" class="nav-button">Course Database</a>
+        </li>
+        <li>
+          <a href="user-profile.html" class="nav-button">(user profile)</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="page">
+      <div class="screen-title">
+        <h1>Confirm/Remove Classes</h1>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-header">
+          <div class="course-card-title-group">
+            <h2 class="course-name">MAT 1140</h2>
+          </div>
+
+          <div class="course-card-icons">
+            <span class="icon-wrapper">
+              <span class="course-icon">🔥</span>
+              <span class="icon-tooltip">Popular Professor</span>
+            </span>
+
+            <span class="icon-wrapper">
+              <button class="remove-class-button" onclick="toggleRemove(this)">
+                X
+              </button>
+              <span class="icon-tooltip"
+                >Removes class from schedule once confirmed</span
+              >
+            </span>
+          </div>
+        </div>
+
+        <div class="course-card-divider"></div>
+
+        <div class="course-card-details">
+          <h3>Calculus 1</h3>
+          <p>No Prerequisites</p>
+          <p>Not Taken</p>
+          <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+          <p>Description</p>
+        </div>
+      </div>
+
+      <div class="course-card">
+        <div class="course-card-header">
+          <div class="course-card-title-group">
+            <h2 class="course-name">MAT 1140</h2>
+          </div>
+
+          <div class="course-card-icons">
+            <span class="icon-wrapper">
+              <span class="course-icon">📈</span>
+              <span class="icon-tooltip">Currently Saved/Added: 100</span>
+            </span>
+
+            <span class="icon-wrapper">
+              <span class="course-icon">🔥</span>
+              <span class="icon-tooltip">Popular Professor</span>
+            </span>
+
+            <span class="icon-wrapper">
+              <button class="remove-class-button" onclick="toggleRemove(this)">
+                X
+              </button>
+              <span class="icon-tooltip"
+                >Removes class from schedule once confirmed</span
+              >
+            </span>
+          </div>
+        </div>
+
+        <div class="course-card-divider"></div>
+
+        <div class="course-card-details">
+          <h3>Calculus 1</h3>
+          <p>No Prerequisites</p>
+          <p>Not Taken</p>
+          <p>Tues, Thurs 8:00 AM -- 10:15 AM</p>
+          <p>Description</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

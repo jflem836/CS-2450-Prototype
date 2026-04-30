@@ -5,3 +5,63 @@ function toggleDropdown(dropdownId) {
     dropdown.classList.toggle("open");
   }
 }
+
+// Updates save as backup class to "saved state" and back to og state when clicked
+function toggleBackup(button) {
+  const wrapper = button.parentElement;
+  const tooltip = wrapper.querySelector(".icon-tooltip");
+
+  const isSaved = button.classList.toggle("saved");
+
+  if (isSaved) {
+    button.textContent = "✅"; // change icon
+    tooltip.textContent = "Saved as backup";
+  } else {
+    button.textContent = "💾";
+    tooltip.textContent = "Save as backup class";
+  }
+}
+
+function toggleRemove(button){
+  const wrapper = button.parentElement;
+  const tooltip = wrapper.querySelector(".icon-tooltip");
+
+  const isSaved = button.classList.toggle("saved");
+
+  if (isSaved) {
+    button.textContent = "✅"; // change icon
+    tooltip.textContent = "Saved as backup";
+  } else {
+    button.textContent = "💾";
+    tooltip.textContent = "Save as backup class";
+  }
+}
+
+// Locks add courses button until 1 or more courses are selected
+function updateAddButtonState() {
+  const checkboxes = document.querySelectorAll(".course-select-box");
+  const addButton = document.getElementById("add-courses-button");
+
+  const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+  addButton.disabled = !anyChecked;
+}
+
+// Checks if there are any checked boxes after run
+document.addEventListener("change", (e) => {
+  if (e.target.classList.contains("course-select-box")) {
+    updateAddButtonState();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateAddButtonState();
+
+  const addButton = document.getElementById("add-courses-button");
+  if (addButton) {
+    addButton.addEventListener("click", () => {
+      if (!addButton.disabled) {
+        window.location.href = "course-confirm.html";
+      }
+    });
+  }
+});
