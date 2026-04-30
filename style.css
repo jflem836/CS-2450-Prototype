@@ -1,6 +1,6 @@
 body {
     display: flex;
-    background-color: #fcfbf8;
+    background-color: #FFFDF2;
     flex-direction: column;
     align-items: stretch;
     min-height: 100vh;
@@ -10,31 +10,25 @@ body {
 
 nav {
     width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-
-main {
-    width: 100%;
-}
-
-.screen {
+main,
+.page {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    display: none;
 }
 
-.screen.active {
-    display: block;
-}
-
-.screen-title{
-    text-align: center;
+a {
+    text-decoration: none;
 }
 
 h1 {
     font-size: 32px;
 }
+
 h3 {
     margin-bottom: 30px;
     font-size: 24px;
@@ -52,30 +46,66 @@ li {
     padding: 0;
 }
 
+.nav-button,
+.schedule-button,
+.arrow-button,
+.alarm-button {
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+}
+
+button,
+.nav-button,
+.schedule-button,
+.arrow-button,
+.alarm-button,
+.filter-button,
+.add-courses-button,
+.dropdown-toggle {
+    transition: transform 0.1s, filter 0.1s;
+}
+
+button:hover,
+.nav-button:hover,
+.schedule-button:hover,
+.arrow-button:hover,
+.alarm-button:hover,
+.filter-button:hover,
+.add-courses-button:hover,
+.dropdown-toggle:hover {
+    transform: scale(1.05);
+}
+
+button:active,
+.nav-button:active,
+.schedule-button:active,
+.arrow-button:active,
+.alarm-button:active,
+.filter-button:active,
+.add-courses-button:active,
+.dropdown-toggle:active {
+    transform: scale(0.97);
+    filter: brightness(0.85);
+}
+
+.screen-title {
+    text-align: center;
+}
+
 .screen-body-container {
-    padding: 0 20px; /* adjust this value */
+    padding: 0 20px;
     text-align: left;
 }
 
 .nav-button {
     width: 150px;
     height: 40px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-}
-
-button{
-    transition: transform 0.1s, filter 0.1s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-button:active {
-    filter: brightness(0.85);
+    background-color: #e0e0e0;
 }
 
 .schedule-button {
@@ -83,6 +113,7 @@ button:active {
     padding: 35px 30px;
     font-size: 18px;
     display: block;
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
@@ -94,12 +125,28 @@ button:active {
     padding: 10px 30px 10px 20px;
     font-size: 16px;
     display: block;
+    width: fit-content;
     margin-left: auto;
     margin-right: 0;
     border: none;
     background: none;
     cursor: pointer;
     clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    background-color: #e0e0e0;
+}
+
+.arrow-button-back {
+    margin-top: 35px;
+    padding: 10px 20px 10px 30px;
+    font-size: 16px;
+    display: block;
+    width: fit-content;
+    margin-left: 0;
+    margin-right: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 15% 100%, 0% 50%);
     background-color: #e0e0e0;
 }
 
@@ -111,6 +158,12 @@ button:active {
     border: none;
 }
 
+.details-button:hover,
+.details-button:active {
+    transform: none;
+    filter: none;
+}
+
 .user-info {
     margin: 30px auto 0 auto;
     width: fit-content;
@@ -118,20 +171,21 @@ button:active {
     font-size: 18px;
 }
 
+.schedule-home,
 .schedule-section {
     margin-top: 30px;
 }
 
-.schedule-box {
+.schedule-box,
+.courses-box {
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     border: 1px solid black;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    
 }
 
 .empty-schedule {
@@ -139,25 +193,13 @@ button:active {
     font-size: 14px;
 }
 
-.courses-box{
-    width: 100%;
-    height: 150px;
-    border: 1px solid black;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
-
-
-
+/* Course database top bar */
 .course-db-topbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
+    width: 100%;
     margin-bottom: 25px;
     flex-wrap: wrap;
 }
@@ -165,50 +207,51 @@ button:active {
 .course-search-bar {
     flex: 1;
     min-width: 220px;
-    max-width: 400px;
-    padding: 10px 14px;
-    font-size: 16px;
+    max-width: 500px;
+    height: 56px;
+    padding: 0 22px;
+    font-size: 17px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 999px;
     box-sizing: border-box;
+    outline: none;
+    background-color: white;
+}
+
+.course-search-bar:focus {
+    border-color: #999;
 }
 
 .course-db-buttons {
     display: flex;
+    align-items: center;
     gap: 12px;
+    margin-left: auto;
 }
 
-.course-db-buttons button {
-    padding: 10px 18px;
+.alarm-button,
+.filter-button {
+    height: 44px;
+    padding: 0 18px;
     font-size: 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.add-courses-button {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    padding: 16px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 999px;
-
-    background-color: rgb(109, 223, 109);
-    color: black;
-    cursor: pointer;
-
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.alarm-button {
+    background-color: #e0e0e0;
 }
 
-#course-database-screen.active .add-courses-button {
-    display: block;
+.filter-button {
+    background-color: #e0e0e0;
 }
 
-.dropdown-section {
+/* Dropdowns */
+.course-dropdown {
     margin-bottom: 20px;
 }
 
@@ -216,7 +259,6 @@ button:active {
     width: 100%;
     text-align: left;
     padding: 14px 16px;
-    margin-top: 16px;
     font-size: 18px;
     border: none;
     border-radius: 8px;
@@ -233,25 +275,7 @@ button:active {
     display: block;
 }
 
-.course-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 16px;
-    margin-bottom: 12px;
-    background-color: white;
-}
-
-.course-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-
-.course-card p {
-    margin: 6px 0;
-    font-size: 15px;
-}
-
+/* Course cards */
 .course-card {
     background-color: white;
     border: 1px solid #ccc;
@@ -284,7 +308,7 @@ button:active {
 
 .course-name {
     margin: 0;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .course-card-icons {
@@ -334,14 +358,143 @@ button:active {
     margin: 12px 0;
 }
 
-.course-card-details p {
-    margin: 6px 0;
-    font-size: 15px;
+.course-card-details {
     text-align: left;
 }
 
-.alarm-button {
-  border: 2px solid red;
-  position: relative;
-  z-index: 1000;
+.course-card-details h3,
+.course-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.course-card-details p,
+.course-card p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+.add-courses-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 999px;
+    background-color: rgb(109, 223, 109);
+    color: black;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Schedule Page */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(7, 1fr);
+    grid-template-rows: 50px repeat(14, 60px);
+    gap: 1px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.table-header {
+    background-color: #585858;
+    color: white;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+    font-size: 14px;
+    border-spacing: 1px;
+    background-color: #cfcfcf;
+}
+
+td {
+    background-color: white;
+    padding: 15px;
+    border-radius: 2px;
+}
+
+th {
+    padding: 15px;
+    border-radius: 2px;
+}
+
+/* Course card fills its cell */
+td[data-course] {
+    padding: 0;
+}
+
+.sch-course-card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: #cde5ff;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #004085;
+    z-index: 10;
+}
+
+.info-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 16px;
+}
+
+/* Schedule Menu */
+.schedule-menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.schedule-menu-saved {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 10px;
+}
+
+
+/* Warning message for Schedule */
+#warnings-popup {
+  display: none; 
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 5px;
+  text-align: left;
+}
+
+#warnings-popup.open {
+  display: block;
+}
+
+
+
+@media (max-width: 700px) {
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    .course-db-topbar {
+        align-items: stretch;
+    }
+
+    .course-db-buttons {
+        margin-left: 0;
+    }
 }
