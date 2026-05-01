@@ -14,7 +14,7 @@ function toggleBackup(button) {
   const isSaved = button.classList.toggle("saved");
 
   if (isSaved) {
-    button.textContent = "✅"; // change icon
+    button.textContent = "✅";
     tooltip.textContent = "Saved as backup";
   } else {
     button.textContent = "💾";
@@ -23,14 +23,14 @@ function toggleBackup(button) {
 }
 
 // Updates remove class to "removed state" and back to og state when clicked
-function toggleRemove(button){
+function toggleRemove(button) {
   const wrapper = button.parentElement;
   const tooltip = wrapper.querySelector(".icon-tooltip");
 
   const isSaved = button.classList.toggle("saved");
 
   if (isSaved) {
-    button.textContent = "↩️"; // change icon
+    button.textContent = "↩️";
     tooltip.textContent = "Removing when click confirm at bottom, click to undo";
   } else {
     button.textContent = "❌";
@@ -57,6 +57,30 @@ document.addEventListener("change", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   updateAddButtonState();
 
+  // Hamburger nav toggle
+  const hamburger = document.querySelector(".nav-hamburger");
+  const navList = document.getElementById("nav-dropdown");
+
+  if (hamburger && navList) {
+    hamburger.addEventListener("click", () => {
+      navList.classList.toggle("open");
+    });
+
+    // Close menu when a nav link is clicked
+    navList.querySelectorAll(".nav-button").forEach(link => {
+      link.addEventListener("click", () => {
+        navList.classList.remove("open");
+      });
+    });
+
+    // Close menu when clicking outside the nav
+    document.addEventListener("click", (e) => {
+      if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
+        navList.classList.remove("open");
+      }
+    });
+  }
+
   const addButton = document.getElementById("add-courses-button");
   if (addButton) {
     addButton.addEventListener("click", () => {
@@ -66,7 +90,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
 // Add selected courses
 function selectRow(row) {
