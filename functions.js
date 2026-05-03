@@ -37,18 +37,25 @@ function toggleBackup(button) {
 function toggleRemove(button) {
   const wrapper = button.parentElement;
   const tooltip = wrapper.querySelector(".icon-tooltip");
+  const card = button.closest(".course-card");
 
-  const isSaved = button.classList.toggle("saved");
+  const undoIcon = "↺";
+  const removeIcon = "×";
 
-  if (isSaved) {
-    button.textContent = "↩️";
+  const isRemoved = button.classList.toggle("removed");
+
+  if (card) {
+    card.classList.toggle("marked-for-removal", isRemoved);
+  }
+
+  if (isRemoved) {
+    button.textContent = undoIcon;
     tooltip.textContent = "Removing when click confirm at bottom, click to undo";
   } else {
-    button.textContent = "❌";
+    button.textContent = removeIcon;
     tooltip.textContent = "Removes class from schedule once confirmed";
   }
 }
-
 // Locks add courses button until 1 or more courses are selected
 function updateAddButtonState() {
   const checkboxes = document.querySelectorAll(".course-select-box");

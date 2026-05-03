@@ -500,6 +500,11 @@ nav ul li:last-child { border-right: none; }
   border: 2px solid var(--primary);
 }
 
+.course-card.marked-for-removal {
+  border: 2px solid #dc2626;
+  background-color: #fef2f2;
+}
+
 .course-card-header {
   display: flex;
   justify-content: space-between;
@@ -577,6 +582,30 @@ nav ul li:last-child { border-right: none; }
 .course-card h3 { margin: 0 0 10px; font-size: 20px; }
 .course-card-details p,
 .course-card p  { margin: 6px 0; font-size: 15px; }
+
+.remove-class-button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 25%;
+  background-color: var(--surface-alt);
+  color: red;
+  font-size: 24px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.remove-class-button:hover {
+  transform: scale(1.05);
+}
+
+.remove-class-button:active {
+  transform: scale(0.95);
+}
 
 /* ============================================================
    SCHEDULE TABLE
