@@ -60,7 +60,11 @@
               </svg>
               Alarms
             </a>
-            <button class="filter-button">
+            <button
+              class="filter-button"
+              type="button"
+              onclick="openFilterScreen()"
+            >
               <svg
                 width="16"
                 height="16"
@@ -375,6 +379,64 @@
         Add Selected Courses
       </button>
     </main>
+
+    <div id="filter-screen" class="screen-overlay">
+      <div class="filter-screen">
+        <div class="filter-screen-header">
+          <h2>Filter Courses</h2>
+          <button
+            class="screen-close-button"
+            type="button"
+            onclick="closeFilterScreen()"
+          >
+            ×
+          </button>
+        </div>
+
+        <section class="filter-section">
+          <h3>Tags</h3>
+          <label><input type="checkbox" /> Popular Class</label>
+          <label><input type="checkbox" /> Popular Professor</label>
+        </section>
+
+        <section class="filter-section">
+          <h3>Availability</h3>
+          <label><input type="checkbox" /> Open Sections</label>
+          <label><input type="checkbox" /> No Waitlist</label>
+          <label><input type="checkbox" /> Open Waitlist</label>
+          <label><input type="checkbox" /> Backup Friendly</label>
+        </section>
+
+        <section class="filter-section">
+          <h3>Schedule</h3>
+          <label
+            ><input type="checkbox" /> Morning Classes: 8:00 AM - 11:45
+            AM</label
+          >
+          <label
+            ><input type="checkbox" /> Afternoon Classes: 12:00 PM - 5:00
+            PM</label
+          >
+          <label
+            ><input type="checkbox" /> Night Classes: 5:15 PM - 8:00 PM</label
+          >
+          <label><input type="checkbox" /> Mon, Wed, Fri</label>
+          <label><input type="checkbox" /> Mon, Wed</label>
+          <label><input type="checkbox" /> Tues, Thurs</label>
+          <label><input type="checkbox" /> One Day Classes</label>
+          <label><input type="checkbox" /> Weekend Classes</label>
+        </section>
+
+        <button
+          class="filter-confirm-button"
+          type="button"
+          onclick="closeFilterScreen()"
+        >
+          Apply Filters
+        </button>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

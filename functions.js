@@ -120,3 +120,15 @@ document.addEventListener("change", (e) => {
     updateAddButtonState();
   }
 });
+
+
+// To open and close the filter popup window
+function openFilterScreen() {
+  const screen = document.getElementById("filter-screen");
+  screen.classList.add("open");
+}
+
+function closeFilterScreen() {
+  const screen = document.getElementById("filter-screen");
+  screen.classList.remove("open");
+}
