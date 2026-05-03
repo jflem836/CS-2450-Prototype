@@ -554,7 +554,10 @@ nav ul li:last-child { border-right: none; }
   transition: background-color 0.15s, color 0.15s;
 }
 .backup-button:hover  { background-color: var(--primary-soft); color: var(--primary); }
-.backup-button.saved  { background-color: var(--primary-soft); color: var(--primary); }
+.backup-button.saved {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
 
 /* Tooltip */
 .icon-wrapper { position: relative; display: inline-flex; align-items: center; }

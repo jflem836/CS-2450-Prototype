@@ -23,7 +23,8 @@ function toggleBackup(button) {
   const isSaved = button.classList.toggle("saved");
 
   if (isSaved) {
-    button.innerHTML = "✅";
+    button.innerHTML = "✔";
+    button.style.color = green;
     tooltip.textContent = "Saved as backup";
   } else {
     button.innerHTML = svgIcon;
