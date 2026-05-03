@@ -2,22 +2,20 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="functions.js" defer></script>
     <title>Home</title>
   </head>
+
   <body>
     <nav>
-      <ul class="nav-list">
+      <ul class="nav-list" id="nav-dropdown">
         <li><a href="index.html" class="nav-button active">Home</a></li>
         <li><a href="schedule.html" class="nav-button">Schedule</a></li>
         <li><a href="alarms.html" class="nav-button">Alarms</a></li>
-        <li>
-          <a href="course-database.html" class="nav-button">Course Database</a>
-        </li>
-        <li>
-          <a href="user-profile.html" class="nav-button">John Smith</a>
-        </li>
+        <li><a href="course-database.html" class="nav-button">Course Database</a></li>
+        <li id="profile-list"><a href="user-profile.html" class="nav-button">John Smith</a></li>
       </ul>
     </nav>
 
@@ -32,19 +30,55 @@
         <h4>Progress: 0/120 credits</h4>
       </div>
 
-      <a href="course-database.html" class="schedule-button"
-        >Plan My Schedule</a
-      >
-      <a href="course-roadmap.html" class="arrow-button">View Roadmap</a>
+      <a href="course-database.html" class="schedule-button fw-bold">Plan My Schedule</a>
+
+      <a href="course-roadmap.html" class="arrow-button">
+        View Roadmap
+        <span class="btn-icon">
+          <svg viewBox="0 0 13 13"><polyline points="5.5,2 9.5,6.5 5.5,11"/></svg>
+        </span>
+      </a>
 
       <section class="schedule-home">
         <h3>Your Schedule:</h3>
         <div class="schedule-box">
-          <p class="empty-schedule">No Schedule Set</p>
+          
+          <table id="saved-courses-table">
+            <thead>
+              <tr class="table-header">
+                <th>Course</th>
+                <th>Days &amp; Time</th>
+                <th>Prerequisites</th>
+                <th>Credits</th>
+              </tr>
+            </thead>
+            <tbody id="saved-courses-body">
+              <tr class="table-data">
+                <td>MAT 1140</td>
+                <td>MWF 8AM</td>
+                <td>MAT 1050</td>
+                <td>3</td>
+              </tr>
+              <tr class="table-data">
+                <td>CS 2200</td>
+                <td>TuTh 10AM</td>
+                <td>CS 1100</td>
+                <td>4</td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
       </section>
 
-      <button class="arrow-button details-button" disabled>View Details</button>
+      <button class="arrow-button details-button" disabled>
+        View Details
+        <span class="btn-icon">
+          <svg viewBox="0 0 13 13"><polyline points="5.5,2 9.5,6.5 5.5,11"/></svg>
+        </span>
+      </button>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

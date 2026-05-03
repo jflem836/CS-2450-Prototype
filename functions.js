@@ -11,26 +11,37 @@ function toggleBackup(button) {
   const wrapper = button.parentElement;
   const tooltip = wrapper.querySelector(".icon-tooltip");
 
+  const svgIcon = `
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 2h7l3 3v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+      <polyline points="9,2 9,5 13,5"/>
+      <line x1="8" y1="8" x2="8" y2="12"/>
+      <line x1="6" y1="10" x2="10" y2="10"/>
+    </svg>
+  `;
+
   const isSaved = button.classList.toggle("saved");
 
   if (isSaved) {
-    button.textContent = "✅"; // change icon
+    button.innerHTML = "✅";
     tooltip.textContent = "Saved as backup";
   } else {
-    button.textContent = "💾";
-    tooltip.textContent = "Save as backup class: backup classes added to cart when same class you applied for is full.";
+    button.innerHTML = svgIcon;
+    tooltip.textContent =
+      "Save as backup class: backup classes added to cart when same class you applied for is full.";
   }
 }
 
+
 // Updates remove class to "removed state" and back to og state when clicked
-function toggleRemove(button){
+function toggleRemove(button) {
   const wrapper = button.parentElement;
   const tooltip = wrapper.querySelector(".icon-tooltip");
 
   const isSaved = button.classList.toggle("saved");
 
   if (isSaved) {
-    button.textContent = "↩️"; // change icon
+    button.textContent = "↩️";
     tooltip.textContent = "Removing when click confirm at bottom, click to undo";
   } else {
     button.textContent = "❌";
@@ -57,6 +68,30 @@ document.addEventListener("change", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   updateAddButtonState();
 
+  // Hamburger nav toggle
+  const hamburger = document.querySelector(".nav-hamburger");
+  const navList = document.getElementById("nav-dropdown");
+
+  if (hamburger && navList) {
+    hamburger.addEventListener("click", () => {
+      navList.classList.toggle("open");
+    });
+
+    // Close menu when a nav link is clicked
+    navList.querySelectorAll(".nav-button").forEach(link => {
+      link.addEventListener("click", () => {
+        navList.classList.remove("open");
+      });
+    });
+
+    // Close menu when clicking outside the nav
+    document.addEventListener("click", (e) => {
+      if (!hamburger.contains(e.target) && !navList.contains(e.target)) {
+        navList.classList.remove("open");
+      }
+    });
+  }
+
   const addButton = document.getElementById("add-courses-button");
   if (addButton) {
     addButton.addEventListener("click", () => {
@@ -66,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
 
 // Add selected courses
 function selectRow(row) {
